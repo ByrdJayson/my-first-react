@@ -25,7 +25,7 @@ function App() {
   const [formErrors, setFormErrors] = useState(initialFormErrors);
   const [users, setUsers] = useState([]);
   const change = (name, value) => {
-    
+    //validate(name, value);
     setFormValues( { ...formValues, [name]: value } );
   }
 

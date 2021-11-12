@@ -25,7 +25,7 @@ export default function Form(props){
                 <input type='email' name='email' placeholder='email' value={email} onChange={onChange}/>
                 <input type='password' name='password' placeholder='password' value={password} onChange={onChange}/>
                 <input type='checkbox' name='tos' checked={tos} onChange={onChange}/>
-                <input type='submit' value='Create!'/>
+                <input type='submit' name='create' value='Create!'/>
             </form>
 
         </div>
