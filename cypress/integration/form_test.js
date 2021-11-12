@@ -7,6 +7,7 @@ describe('Form', () => {
     const foobarInput = () => cy.get('input[name=foobar]');
     const createBtn = () => cy.get('input[name=create]');
     const tosBox = () => cy.get('input[type=checkbox]');
+    const passInput = () => cy.get('input[name=password]')
 
     it('sanity check', () => {
         expect(1+2).to.equal(3);
@@ -20,10 +21,32 @@ describe('Form', () => {
         emailInput().should('exist');
         createBtn().should('exist');
         tosBox().should('exist');
+        passInput().should('exist');
         
 
         cy.contains('Create!').should('exist');
         
     })
+
+    
+    it('elements are created, rendered, and removed from inputs', () => {
+            
+            
+        nameInput().type('Jayson');
+        emailInput().type('jayson_byrd_95@outlook.com');
+        passInput().type('starpound167');
+        createBtn().click();
+
+        cy.contains('jayson_byrd_95@outlook.com').should('exist');
+        
+
+
+
+            
+            
+        })
+        
+        
+    
 
 })
